@@ -17,7 +17,7 @@ int main(void)
 		scanf("%d", &key);
 		for (j = 0; j < 44100 / 4; j++)
 		{
-			unsigned char a = (unsigned char)(sin(x) * 127.0 + 128.0);
+			unsigned char a = (unsigned char)((sin(x) >= 0.0 ? 1.0 : -1.0) * 127.0 + 128.0);
 			fwrite(&a, 1, 1, fp);
 			x += 441.0 * pow(2.0, (double)key / 12.0) * 2.0 * 3.14159265358979 / 44100.0;
 		}
