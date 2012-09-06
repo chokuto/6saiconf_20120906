@@ -8,5 +8,16 @@ int main(void)
 	FILE* fp = fopen("out.wav", "wb");
 	double x = 0.0;
 	fwrite(header, 1, 44, fp);
+	for (i = 0; i < 16; i++)
+	{
+		int key;
+		scanf("%d", &key);
+		for (j = 0; j < 44100 / 4; j++)
+		{
+			unsigned char a = (unsigned char)(sin(x) * 127.0 + 128.0);
+			fwrite(&a, 1, 1, fp);
+			x += 441.0 * pow(2.0, (double)key / 12.0) * 2.0 * 3.14159265358979 / 44100.0;
+		}
+	}
 	return 0;
 }
