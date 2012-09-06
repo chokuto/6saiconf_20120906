@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
+/* 7 6 7 6 7 2 5 3 0 0 0 0 0 0 0 0 Für Elise */
+/* 9 9 7 7 6 6 6 6 4 6 7 4 2 2 2 2 Biene */
+
 int main(void)
 {
 	int i, j;
