@@ -19,5 +19,6 @@ int main(void)
 			x += 441.0 * pow(2.0, (double)key / 12.0) * 2.0 * 3.14159265358979 / 44100.0;
 		}
 	}
+	fclose(fp);
 	return 0;
 }
